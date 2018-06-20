@@ -4,9 +4,8 @@ project( Tokenizer )
 
 set( sources
 	main.cpp
-	tokenizer.cpp
-	game.cpp
-	CmdLine.cpp
+	ParseCmd.cpp
+	Game.cpp
 	)
 
 set( CMAKE_EXPORT_COMPILE_COMMANDS ON )

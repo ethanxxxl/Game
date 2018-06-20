@@ -4,6 +4,7 @@
 #include <ncurses.h>
 #include <string>
 #include <map>
+#include "ParseCmd.h"
 
 class Game
 {
@@ -20,6 +21,9 @@ private:
 public:
 	//this class is going the be the drawing class, so there will be some puplic functions here
 	// for drawing different sized windows for different attributes of the game.
+
+	// all window making functions will be static.
+	static void cmd_line();
 };
 
 #endif

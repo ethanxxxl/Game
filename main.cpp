@@ -4,9 +4,7 @@
 #include <tuple>
 #include <map>
 #include <ncurses.h>
-#include "tokenizer.h"
 #include "Game.h"
-#include "CmdLine.h"
 
 void helloWorld()
 {
@@ -16,8 +14,6 @@ void helloWorld()
 
 int main()
 {
-	CmdLine gm;
-	Tokenizer tk;
 
 	WINDOW *cmd_win = gm.init_cmd();
 
