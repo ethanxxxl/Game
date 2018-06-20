@@ -1,1 +1,0 @@
-/usr/bin/c++     CMakeFiles/run.dir/main.cpp.o CMakeFiles/run.dir/tokenizer.cpp.o CMakeFiles/run.dir/game.cpp.o  -o run -lncurses 

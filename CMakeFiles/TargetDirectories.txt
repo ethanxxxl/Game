@@ -1,3 +1,0 @@
-/home/ethan/Tokenizer/CMakeFiles/rebuild_cache.dir
-/home/ethan/Tokenizer/CMakeFiles/run.dir
-/home/ethan/Tokenizer/CMakeFiles/edit_cache.dir
