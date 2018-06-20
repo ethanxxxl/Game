@@ -5,7 +5,7 @@
 #include <map>
 #include <ncurses.h>
 #include "tokenizer.h"
-#include "game.h"
+#include "Game.h"
 #include "CmdLine.h"
 
 void helloWorld()
