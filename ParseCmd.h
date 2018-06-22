@@ -15,19 +15,16 @@ private:
 	typedef  std::vector<std::tuple<std::string, int>> token_data;
 
 public:
-	ParseCmd();
-	~ParseCmd();
-
 	//comandline functions
-	int get_cmd(WINDOW *cmd_line, std::string input, callback_list_type);
+	int getCmd(WINDOW *cmd_line, std::string input, callback_list_type);
 
 	//tokenizer functions
 	
 	//TODO: make the tokenizer simpler, but also have options you can set to make
 	// it behave a certain way.
-	std::vector<std::string> tokenize_string(std::string input_str, char delimeter = ' ');
-	token_data summarize_string(std::string input_str);
-	void crush_string(std::string input_str);
+	std::vector<std::string> tokenizeString(std::string input_str, char delimeter = ' ');
+	token_data summarizeString(std::string input_str);
+	void crushString(std::string input_str);
 
 };
 

@@ -5,6 +5,10 @@
 #include <map>
 #include <ncurses.h>
 #include "Game.h"
+#include "CommandLine.h"
+
+// this is very bad, only going to be temporary though.
+bool keep_running = true;
 
 void helloWorld()
 {
@@ -12,21 +16,24 @@ void helloWorld()
 	refresh();
 }
 
+void quit()
+{
+	keep_running = false;
+}
+
+
+
 int main()
 {
+	CommandLine cmd;
 
-	WINDOW *cmd_win = gm.init_cmd();
+	cmd.callback_list.emplace("test", &helloWorld);
+	cmd.callback_list.emplace("quit", &quit);
 
-	std::map<std::string, void (*)(void)> funcs;
-
-	funcs.emplace(std::make_pair("hello", &helloWorld));
-
-	while (true)
+	while ( keep_running )
 	{
-		gm.get_cmd(cmd_win, funcs);
-		wrefresh(cmd_win);
+		cmd.getCommand();
 	}
 
-	std::cin.get();
 	return 0;
 }

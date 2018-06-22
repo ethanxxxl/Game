@@ -2,28 +2,30 @@
 #define GAME_H
 
 #include <ncurses.h>
+#include <panel.h>
 #include <string>
 #include <map>
 #include "ParseCmd.h"
 
+// TODO: rename this class to something better.
 class Game
 {
 private:
+
+public:
+	Game();
+	~Game();
+
 	typedef void (*callback_func)(WINDOW *);
 	typedef std::map<std::string, callback_func> callback_list_type;
 
-	void test(WINDOW *);
-	void exit(WINDOW *);
-	void echo(WINDOW *);
+	void show();
+	void hide();
+
+protected:
+	WINDOW *window;
+	PANEL *panel;
 	
-	//TODO: make a callback list and add all the commandline functions to it.
-
-public:
-	//this class is going the be the drawing class, so there will be some puplic functions here
-	// for drawing different sized windows for different attributes of the game.
-
-	// all window making functions will be static.
-	static void cmd_line();
 };
 
 #endif
