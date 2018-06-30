@@ -10,25 +10,27 @@
 // this is very bad, only going to be temporary though.
 bool keep_running = true;
 
-void helloWorld()
+namespace cmdFuncs
 {
-	mvaddstr(1, 1, "Hello World!");
-	refresh();
-}
+	void helloWorld()
+	{
+		mvaddstr(1, 1, "Hello World!");
+		refresh();
+	}
 
-void quit()
-{
-	keep_running = false;
+	void quit()
+	{
+		keep_running = false;
+	}
 }
-
 
 
 int main()
 {
 	CommandLine cmd;
 
-	cmd.callback_list.emplace("test", &helloWorld);
-	cmd.callback_list.emplace("quit", &quit);
+	cmd.callback_list.emplace("test", &cmdFuncs::helloWorld);
+	cmd.callback_list.emplace("quit", &cmdFuncs::quit);
 
 	while ( keep_running )
 	{
