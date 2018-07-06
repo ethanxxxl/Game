@@ -7,6 +7,8 @@ set( sources
 	ParseCmd.cpp
 	Game.cpp
 	CommandLine.cpp
+	Map.cpp
+	Node.cpp
 	)
 
 set( CMAKE_EXPORT_COMPILE_COMMANDS ON )

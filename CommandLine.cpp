@@ -38,7 +38,6 @@ void CommandLine::getCommand()
 		search->second();
 		refresh();
 		clearPrompt();
-
 	}
 	else
 	{

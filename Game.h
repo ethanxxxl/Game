@@ -22,6 +22,8 @@ public:
 	void show();
 	void hide();
 
+	virtual void inputHandler();
+
 protected:
 	WINDOW *window;
 	PANEL *panel;

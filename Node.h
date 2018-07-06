@@ -10,7 +10,7 @@ class Node
 public:
 	typedef std::map<std::string, int> node_t;
 	typedef std::pair<std::string, int> item_t;
-	
+
 	Node();
 	Node(node_t data_new);
 
@@ -22,6 +22,7 @@ public:
 
 	// appends one item to the end of the node
 	void addToNode(item_t item);
+
 
 private:
 	node_t data;
